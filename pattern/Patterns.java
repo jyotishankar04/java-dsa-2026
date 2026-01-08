@@ -3,6 +3,7 @@ import java.util.Scanner;
 class PatternPrinter {
     // ! Pattern 1
     public void pattern1(int n) {
+        System.err.println("");
         System.err.println("Pattern 1: ");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -14,7 +15,8 @@ class PatternPrinter {
 
     // ! Pattern 2
     public void pattern2(int n) {
-        System.err.println("\n Pattern 2: ");
+        System.err.println("");
+        System.err.println("Pattern 2: ");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -25,8 +27,9 @@ class PatternPrinter {
 
     // ! Pattern 3
     public void pattern3(int n) {
-        System.err.println("\n Pattern 3: ");
-        for (int i = 1; i <=n; i++) {
+        System.err.println("");
+        System.err.println("Pattern 3: ");
+        for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
             }
@@ -36,7 +39,8 @@ class PatternPrinter {
 
     // ! Pattern 4
     public void pattern4(int n) {
-        System.err.println("\n Pattern 4: ");
+        System.err.println("");
+        System.err.println("Pattern 4: ");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(i);
@@ -44,16 +48,47 @@ class PatternPrinter {
             System.out.println();
         }
     }
-    // ! Pattern 5 
+
+    // ! Pattern 5
     public void pattern5(int n) {
-        System.err.println("\n Pattern 5: ");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - i; j++) {
+        System.err.println("");
+        System.err.println("Pattern 5: ");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i + 1; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-    } 
+    }
+
+    public void pattern6(int n) {
+        System.err.println("");
+        System.err.println("Pattern 6: ");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i + 1; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
+    public void pattern7(int n) {
+        System.err.println("");
+        System.err.println("Pattern 7: ");
+        for (int i = 0; i < n; i++) {
+            
+            // This loop will print the spaces
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+
+            // Inner loop will print asterisks
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 }
 
 public class Patterns {
@@ -69,6 +104,8 @@ public class Patterns {
         printer.pattern3(n);
         printer.pattern4(n);
         printer.pattern5(n);
+        printer.pattern6(n);
+        printer.pattern7(n);
         sc.close();
     }
 }
