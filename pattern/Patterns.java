@@ -223,13 +223,25 @@ class PatternPrinter {
 
         for (int i = 0; i < n; i++) {
             for (char j = 'A'; j <= 'A' + i; j++) {
-                System.err.print(j);
+                System.out.print(j);
             }
             System.out.println();
         }
     }
-    
 
+    // ! Pattern 15
+    public void pattern15(int n) {
+        System.out.println("");
+        System.out.println("Pattern 15: ");
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                char ch = (char) ('A' + j);
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
 }
 
 public class Patterns {
@@ -254,6 +266,7 @@ public class Patterns {
         printer.pattern12(n);
         printer.pattern13(n);
         printer.pattern14(n);
+        printer.pattern15(n);
 
         sc.close();
     }
