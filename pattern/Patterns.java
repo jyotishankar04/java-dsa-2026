@@ -3,8 +3,8 @@ import java.util.Scanner;
 class PatternPrinter {
     // ! Pattern 1
     public void pattern1(int n) {
-        System.err.println("");
-        System.err.println("Pattern 1: ");
+        System.out.println("");
+        System.out.println("Pattern 1: ");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print("*");
@@ -15,8 +15,8 @@ class PatternPrinter {
 
     // ! Pattern 2
     public void pattern2(int n) {
-        System.err.println("");
-        System.err.println("Pattern 2: ");
+        System.out.println("");
+        System.out.println("Pattern 2: ");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -27,8 +27,8 @@ class PatternPrinter {
 
     // ! Pattern 3
     public void pattern3(int n) {
-        System.err.println("");
-        System.err.println("Pattern 3: ");
+        System.out.println("");
+        System.out.println("Pattern 3: ");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
@@ -39,8 +39,8 @@ class PatternPrinter {
 
     // ! Pattern 4
     public void pattern4(int n) {
-        System.err.println("");
-        System.err.println("Pattern 4: ");
+        System.out.println("");
+        System.out.println("Pattern 4: ");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(i);
@@ -51,8 +51,8 @@ class PatternPrinter {
 
     // ! Pattern 5
     public void pattern5(int n) {
-        System.err.println("");
-        System.err.println("Pattern 5: ");
+        System.out.println("");
+        System.out.println("Pattern 5: ");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n - i + 1; j++) {
                 System.out.print("*");
@@ -63,8 +63,8 @@ class PatternPrinter {
 
     // ! Pattern 6
     public void pattern6(int n) {
-        System.err.println("");
-        System.err.println("Pattern 6: ");
+        System.out.println("");
+        System.out.println("Pattern 6: ");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n - i + 1; j++) {
                 System.out.print(j);
@@ -75,8 +75,8 @@ class PatternPrinter {
 
     // ! Pattern 7
     public void pattern7(int n) {
-        System.err.println("");
-        System.err.println("Pattern 7: ");
+        System.out.println("");
+        System.out.println("Pattern 7: ");
         for (int i = 0; i < n; i++) {
 
             // This loop will print the spaces
@@ -94,18 +94,18 @@ class PatternPrinter {
 
     // ! Pattern 8
     public void pattern8(int n) {
-        System.err.println("");
-        System.err.println("Pattern 8: ");
+        System.out.println("");
+        System.out.println("Pattern 8: ");
         for (int i = 0; i < n; i++) {
             for (int j = 1; j <= (2 * n - 1); j++) {
                 if (j <= i) {
-                    System.err.print(" ");
+                    System.out.print(" ");
                 }
                 if (j > i && j < (2 * n - i)) {
-                    System.err.print("*");
+                    System.out.print("*");
                 }
                 if (j >= (2 * n - 1)) {
-                    System.err.print(" ");
+                    System.out.print(" ");
                 }
             }
             System.out.println();
@@ -114,8 +114,8 @@ class PatternPrinter {
 
     // ! Pattern 9 - Combination of the pattern 7 and 8
     public void pattern9(int n) {
-        System.err.println("");
-        System.err.println("Pattern 9: ");
+        System.out.println("");
+        System.out.println("Pattern 9: ");
         // The Upper Part
         for (int i = 0; i < n; i++) {
 
@@ -135,13 +135,13 @@ class PatternPrinter {
 
             for (int j = 1; j <= (2 * n - 1); j++) {
                 if (j <= i) {
-                    System.err.print(" ");
+                    System.out.print(" ");
                 }
                 if (j > i && j < (2 * n - i)) {
-                    System.err.print("*");
+                    System.out.print("*");
                 }
                 if (j >= (2 * n - 1)) {
-                    System.err.print(" ");
+                    System.out.print(" ");
                 }
             }
             System.out.println();
@@ -150,8 +150,8 @@ class PatternPrinter {
 
     // ! Pattern 10
     public void pattern10(int n) {
-        System.err.println("");
-        System.err.println("Pattern 10: ");
+        System.out.println("");
+        System.out.println("Pattern 10: ");
         for (int i = 0; i < 2 * n - 1; i++) {
             int stars = i;
             if (i >= n)
@@ -164,20 +164,39 @@ class PatternPrinter {
                 stars = 2 * n - i - 2;
 
             for (int j = 0; j <= stars; j++) {
-                System.err.print("*");
+                System.out.print("*");
             }
             System.out.println();
         }
     }
+
     // ! Pattern 11
     public void pattern11(int n) {
-        System.err.println("");
-        System.err.println("Pattern 11: ");
+        System.out.println("");
+        System.out.println("Pattern 11: ");
         int counter = 1;
-        for (int i = 0; i < n ; i++) {
-            for(int j = 0; j <= i; j++){
-                System.err.print(counter);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(counter);
                 counter = (counter == 1) ? (counter - 1) : (counter + 1);
+            }
+            System.out.println();
+        }
+    }
+
+    // ! Pattern 12
+    public void pattern12(int n) {
+        System.out.println("");
+        System.out.println("Pattern 12: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(j + 1);
+            }
+            for (int j = 0; j < (2 * n - (2 * i + 1) - 1); j++) {
+                System.out.print(" ");
+            }
+            for (int j = i; j >= 0; j--) {
+                System.out.print(j + 1);
             }
             System.out.println();
         }
@@ -203,6 +222,8 @@ public class Patterns {
         printer.pattern9(n);
         printer.pattern10(n);
         printer.pattern11(n);
+        printer.pattern12(n);
+
         sc.close();
     }
 }
