@@ -147,6 +147,29 @@ class PatternPrinter {
             System.out.println();
         }
     }
+
+    // ! Pattern 10
+    public void pattern10(int n) {
+        System.err.println("");
+        System.err.println("Pattern 10: ");
+        for (int i = 0; i < 2 * n - 1; i++) {
+            int stars = i;
+            if (i >= n)
+                // We use i - 2 because we start counting
+                // from the top of the pattern and we need
+                // to count the lines below the middle
+                // of the pattern. The top and bottom lines
+                // of the pattern have one less star than
+                // the middle line.
+                stars = 2 * n - i - 2;
+
+            for (int j = 0; j <= stars; j++) {
+                System.err.print("*");
+            }
+            System.out.println();
+        }
+    }
+
 }
 
 public class Patterns {
@@ -166,6 +189,7 @@ public class Patterns {
         printer.pattern7(n);
         printer.pattern8(n);
         printer.pattern9(n);
+        printer.pattern10(n);
         sc.close();
     }
 }
