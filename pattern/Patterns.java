@@ -111,6 +111,42 @@ class PatternPrinter {
             System.out.println();
         }
     }
+
+    // ! Pattern 9 - Combination of the pattern 7 and 8
+    public void pattern9(int n) {
+        System.err.println("");
+        System.err.println("Pattern 9: ");
+        // The Upper Part
+        for (int i = 0; i < n; i++) {
+
+            // This loop will print the spaces
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+
+            // Inner loop will print asterisks
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        // The lower part
+        for (int i = 0; i < n; i++) {
+
+            for (int j = 1; j <= (2 * n - 1); j++) {
+                if (j <= i) {
+                    System.err.print(" ");
+                }
+                if (j > i && j < (2 * n - i)) {
+                    System.err.print("*");
+                }
+                if (j >= (2 * n - 1)) {
+                    System.err.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 
 public class Patterns {
@@ -129,6 +165,7 @@ public class Patterns {
         printer.pattern6(n);
         printer.pattern7(n);
         printer.pattern8(n);
+        printer.pattern9(n);
         sc.close();
     }
 }
