@@ -201,7 +201,7 @@ class PatternPrinter {
             System.out.println();
         }
     }
-    
+
     // ! Pattern 13
     public void pattern13(int n) {
         System.out.println("");
@@ -215,6 +215,21 @@ class PatternPrinter {
             System.out.println();
         }
     }
+
+    // ! Pattern 14
+    public void pattern14(int n) {
+        System.out.println("");
+        System.out.println("Pattern 14: ");
+
+        for (int i = 0; i < n; i++) {
+            for (char j = 'A'; j <= 'A' + i; j++) {
+                System.err.print(j);
+            }
+            System.out.println();
+        }
+    }
+    
+
 }
 
 public class Patterns {
@@ -238,6 +253,7 @@ public class Patterns {
         printer.pattern11(n);
         printer.pattern12(n);
         printer.pattern13(n);
+        printer.pattern14(n);
 
         sc.close();
     }
