@@ -260,7 +260,7 @@ class PatternPrinter {
     // ! Pattern 17
     public void pattern17(int n) {
         System.out.println("");
-        System.out.println("Pattern 7: ");
+        System.out.println("Pattern 17: ");
         for (int i = 0; i < n; i++) {
 
             // This loop will print the spaces
@@ -281,6 +281,20 @@ class PatternPrinter {
         }
     }
     
+    // ! Pattern 18
+    public void pattern18(int n) {
+        System.out.println("");
+        System.out.println("Pattern 18: ");
+
+        for (int i = 0; i < n; i++) {
+            char ch = (char)('A' + n - i - 1);
+            for (int j = 0; j <= i; j++) {
+                System.out.print(ch);
+                ch++;
+            }
+            System.out.println();
+        }
+    }
 
 }
 
@@ -309,6 +323,7 @@ public class Patterns {
         printer.pattern15(n);
         printer.pattern16(n);
         printer.pattern17(n);
+        printer.pattern18(n);   
 
         sc.close();
     }
