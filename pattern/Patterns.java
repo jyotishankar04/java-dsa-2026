@@ -256,6 +256,32 @@ class PatternPrinter {
             System.out.println();
         }
     }
+    
+    // ! Pattern 17
+    public void pattern17(int n) {
+        System.out.println("");
+        System.out.println("Pattern 7: ");
+        for (int i = 0; i < n; i++) {
+
+            // This loop will print the spaces
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            char ch = 'A';
+            // Inner loop will print asterisks
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print(ch);
+                if(j >= (2 * i + 1)/2 ){
+                    ch--;
+                }else{
+                    ch++;
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+
 }
 
 public class Patterns {
@@ -282,6 +308,8 @@ public class Patterns {
         printer.pattern14(n);
         printer.pattern15(n);
         printer.pattern16(n);
+        printer.pattern17(n);
+
         sc.close();
     }
 }
