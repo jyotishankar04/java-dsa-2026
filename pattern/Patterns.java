@@ -169,7 +169,19 @@ class PatternPrinter {
             System.out.println();
         }
     }
-
+    // ! Pattern 11
+    public void pattern11(int n) {
+        System.err.println("");
+        System.err.println("Pattern 11: ");
+        int counter = 1;
+        for (int i = 0; i < n ; i++) {
+            for(int j = 0; j <= i; j++){
+                System.err.print(counter);
+                counter = (counter == 1) ? (counter - 1) : (counter + 1);
+            }
+            System.out.println();
+        }
+    }
 }
 
 public class Patterns {
@@ -190,6 +202,7 @@ public class Patterns {
         printer.pattern8(n);
         printer.pattern9(n);
         printer.pattern10(n);
+        printer.pattern11(n);
         sc.close();
     }
 }
