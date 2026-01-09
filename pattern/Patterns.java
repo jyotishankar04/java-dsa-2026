@@ -256,7 +256,7 @@ class PatternPrinter {
             System.out.println();
         }
     }
-    
+
     // ! Pattern 17
     public void pattern17(int n) {
         System.out.println("");
@@ -271,26 +271,58 @@ class PatternPrinter {
             // Inner loop will print asterisks
             for (int j = 0; j < 2 * i + 1; j++) {
                 System.out.print(ch);
-                if(j >= (2 * i + 1)/2 ){
+                if (j >= (2 * i + 1) / 2) {
                     ch--;
-                }else{
+                } else {
                     ch++;
                 }
             }
             System.out.println();
         }
     }
-    
+
     // ! Pattern 18
     public void pattern18(int n) {
         System.out.println("");
         System.out.println("Pattern 18: ");
 
         for (int i = 0; i < n; i++) {
-            char ch = (char)('A' + n - i - 1);
+            char ch = (char) ('A' + n - i - 1);
             for (int j = 0; j <= i; j++) {
                 System.out.print(ch);
                 ch++;
+            }
+            System.out.println();
+        }
+    }
+
+    // ! Pattern 19
+    public void pattern19(int n) {
+        System.out.println("");
+        System.out.println("Pattern 19: ");
+        // Upper Pattern
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= n - i - 1; j++) {
+                System.out.print("*");
+            }
+            for (int j = 0; j < 2 * i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= n - i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        // Lower Pattern
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int j = 0; j < (2 * n - (2 * i + 2)); j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
             }
             System.out.println();
         }
@@ -323,7 +355,8 @@ public class Patterns {
         printer.pattern15(n);
         printer.pattern16(n);
         printer.pattern17(n);
-        printer.pattern18(n);   
+        printer.pattern18(n);
+        printer.pattern19(n);
 
         sc.close();
     }
