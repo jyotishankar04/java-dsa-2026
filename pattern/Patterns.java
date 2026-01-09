@@ -61,6 +61,7 @@ class PatternPrinter {
         }
     }
 
+    // ! Pattern 6
     public void pattern6(int n) {
         System.err.println("");
         System.err.println("Pattern 6: ");
@@ -72,11 +73,12 @@ class PatternPrinter {
         }
     }
 
+    // ! Pattern 7
     public void pattern7(int n) {
         System.err.println("");
         System.err.println("Pattern 7: ");
         for (int i = 0; i < n; i++) {
-            
+
             // This loop will print the spaces
             for (int j = 0; j < n - i - 1; j++) {
                 System.out.print(" ");
@@ -85,6 +87,26 @@ class PatternPrinter {
             // Inner loop will print asterisks
             for (int j = 0; j < 2 * i + 1; j++) {
                 System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    // ! Pattern 8
+    public void pattern8(int n) {
+        System.err.println("");
+        System.err.println("Pattern 8: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j <= (2 * n - 1); j++) {
+                if (j <= i) {
+                    System.err.print(" ");
+                }
+                if (j > i && j < (2 * n - i)) {
+                    System.err.print("*");
+                }
+                if (j >= (2 * n - 1)) {
+                    System.err.print(" ");
+                }
             }
             System.out.println();
         }
@@ -106,6 +128,7 @@ public class Patterns {
         printer.pattern5(n);
         printer.pattern6(n);
         printer.pattern7(n);
+        printer.pattern8(n);
         sc.close();
     }
 }
